@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  position: relative;
+  margin: 50px 10px;
+  border: 2px solid black;
+  width: 500px;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgb(255, 221, 0);
+}
+.search input {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: 85%;
+  outline: none;
+  background: none;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+.search .search-btn {
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.search .search-btn:active {
+  transform: scale(0.9);
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main .card {
+  margin: 10px;
+  position: relative;
+  height: 250px;
+  width: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main .card .card-image .playbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: rgb(255, 221, 0);
+  z-index: 999999;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.main .card .card-image .playbutton:hover {
+  opacity: 1;
+}
+.main .card .card-image img:hover ~ .playbutton {
+  opacity: 1;
+}
+.main .card .card-title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: -111;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.021), black);
+}
+.main .card .card-image img {
+  position: absolute;
+  height: 250px;
+  width: 170px;
+  background-color: none;
+  transition: all 0.4s;
+}
+.main .card .card-image img:hover {
+  transform: scale(1.1);
+}
+.main .card .card-title {
+  position: absolute;
+  z-index: 9999;
+  color: #fff;
+  bottom: 0px;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 20px 0px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main .card .card-rating {
+  position: absolute;
+  z-index: 9999;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 5px 3px 3px 10px;
+  background-color: rgba(0, 0, 0, 0.503);
+}
+.main .card .card-rating span {
+  margin: 0 5px;
+}
